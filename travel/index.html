@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Portal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type ="image/x-icon" href="#" sizes="32x32">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type ="image/x-icon" href="assets/plane.ico" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,700;1,400;1,700&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet"></head>
 <body>
     <div class="container">
@@ -20,10 +19,10 @@
                 </div>
             <nav class="header-nav">
                 <ul class="header-list">
-                    <li class="header-item"><a href="#" class="header-link">How It Works</a></li>
-                    <li class="header-item"><a href="#" class="header-link">Plan Your Trip</a></li>
-                    <li class="header-item"><a href="#" class="header-link">Destinations</a></li>
-                    <li class="header-item"><a href="#" class="header-link">Travel Stories</a></li>
+                    <li class="header-item"><a href="#preview" class="header-link">How It Works</a></li>
+                    <li class="header-item"><a href="#steps" class="header-link">Plan Your Trip</a></li>
+                    <li class="header-item"><a href="#destinations" class="header-link">Destinations</a></li>
+                    <li class="header-item"><a href="#stories" class="header-link">Travel Stories</a></li>
                 </ul>
             </nav>
             <div>
@@ -32,7 +31,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="preview">
+            <section class="preview" id="preview">
                 <div class="search">
                     <h1 class="preview-title">Explore the beauty of the World</h1>
                     <p class="preview-subtitle">Receive personalized recommendations for countries, hotels, activities and more</p>
@@ -42,7 +41,7 @@
                     </form>
                 </div>
             </section>
-            <section class="steps">
+            <section class="steps" id="steps">
                 <h2 class="subtitle">3 STEPS TO THE PERFECT TRIP</h2>
                 <div class="step-cards">
                     <div class="step-card">
@@ -65,7 +64,7 @@
                     </div>
                 </div>
             </section>
-            <section class="destinations">
+            <section class="destinations" id="destinations">
                 <h2 class="subtitle">POPULAR DESTINATIONS</h2>
                 <div class="banner">
                     <div class="country-card norway">
@@ -79,64 +78,83 @@
                     </div>
                 </div>
                 <ul class="pagination">
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="pagination-item"><a href="#"></a></li>
+                    <li class="pagination-item"><a href="#"></a></li>
+                    <li class="pagination-item"><a href="#"></a></li>
                 </ul>
-                <button>Find More</button>
+                <div class="content-button">
+                    <button class="button">
+                        <img src="assets/arrow.svg" alt="find more" class="button-img"/>Find More
+                    </button>
+                </div>
             </section>
-            <section class="stories">
+            <section class="stories" id="stories">
                 <h2 class="subtitle">TRAVEL STORIES</h2>
-                <div>
-                    <div>
-                        <div>
-                            <img src="" alt=""/>
+                <div class="stories-block">
+                    <div class="stories-cards">
+                        <div class="story-card">
+                            <div class="story-card-img img-thailand"></div>
+                            <div>
+                                <h3 class="story-card-subtitle">10 Photos of Attractive Thailand</h3>
+                                <p class="story-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<br>
+                                    <a href="#" class="text-link">Read More</a>
+                                </p>
+                             </div>
                         </div>
-                        <div>
-                            <h3>10 Photos of Attractive Thailand</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                <a href="#">Read More</a>
-                            </p>
+                        <div class="story-card">
+                            <div class="story-card-img img-utah"></div>
+                            <div>
+                                <h3 class="story-card-subtitle">Canyonlands National Park, Utah</h3>
+                                <p class="story-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<br>
+                                    <a href="#" class="text-link">Read More</a>
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
+                        <div class="story-card">
+                            <div class="story-card-img img-mountains"></div>
+                            <div>
+                                <h3 class="story-card-subtitle">I left my heart in the Mountains!</h3>
+                                <p class="story-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<br>
+                                    <a href="#" class="text-link">Read More</a>
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <h3>Canyonlands National Park, Utah</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                <a href="#">Read More</a>
-                            </p>
+                        <div class="story-card">
+                            <div class="story-card-img img-journey"></div>
+                            <div>
+                                <h3 class="story-card-subtitle">The Longest journey in my life!</h3>
+                                <p class="story-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...<br>
+                                    <a href="#" class="text-link">Read More</a>
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <img src="" alt=""/>
-                        </div>
-                        <div>
-                            <h3>I left my heart in the Mountains!</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                <a href="#">Read More</a>
-                            </p>
-                        </div>
-                        <div>
-                            <img src="" alt=""/>
-                        </div>
-                        <div>
-                            <h3>The Longest journey in my life!</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                <a href="#">Read More</a>
-                            </p>
+                        <div class="content-button">
+                            <button class="button">
+                                <img src="assets/arrow.svg" alt="see more" class="button-img"/>See More
+                            </button>
                         </div>
                     </div>
-                    <div></div>
-                    <button>See More</button>
                 </div>
             </section>
         </main>
-        <footer>
-            <p>All Rights Reserved © Travel Portal</p>
-            <ul>
-                <li><a href="https://github.com/Alesia-V175" target="_blank " rel="noopener"></a></li>
-                <li><a href="https://rs.school/js/" target="_blank " rel="noopener"></a></li>
-                <li><a href="https://rs.school/js/" target="_blank " rel="noopener"></a></li>
+        <footer class="footer">
+            <div class="empty-block"></div>
+            <p class="copyright">All Rights Reserved © Travel Portal</p>
+            <ul class="contacts">
+                <li class="contacts-item">
+                    <a href="https://rs.school/js/" target="_blank " rel="noopener">
+                        <img src="assets/instagram-icon.svg" alt="instagram" title="Instagram"/>
+                    </a>
+                </li>
+                <li class="contacts-item">
+                    <a href="https://github.com/Alesia-V175" target="_blank " rel="noopener">
+                        <img src="assets/youtube-icon.svg" alt="youtube" title="Youtube"/>
+                    </a>
+                </li>
+                <li class="contacts-item"><a href="https://github.com/Alesia-V175" target="_blank " rel="noopener">
+                    <img src="assets/twitter-icon.svg" alt="twitter" title="Twitter"/>
+                </a>
+                </li>
             </ul>
         </footer>
     </div>

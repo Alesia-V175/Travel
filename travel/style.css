@@ -1,3 +1,7 @@
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         color: #ffffff;
         font-family: 'Red Hat Text', sans-serif;
@@ -6,6 +10,7 @@
         font-size: 16px;
         line-height: 21px;
         margin: 0;
+        background-color: #ffffff;
     }
 
     .container {
@@ -16,7 +21,6 @@
     .header-bg {
         background: url("assets/preview-bg.jpg") no-repeat;
         background-size: cover;
-        box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
     }
 
     .header {
@@ -79,9 +83,9 @@
         margin-right: 120px;
     }
 
-    .button:focus,
-    .button:hover,
-    .button:active {
+    .container .button:focus,
+    .container .button:hover,
+    .container .button:active {
         background-color: #0C7A8E;
     }
 
@@ -154,7 +158,7 @@
         line-height: 53px;
         color: #F2785C;
         text-align: center;
-        margin-bottom: 40px;
+        margin: 40px 0 40px;
     }
 
     .steps {
@@ -164,6 +168,7 @@
     .step-cards {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 97px;
     }
 
     .step-card {
@@ -221,3 +226,164 @@
         text-transform: uppercase;
         margin: 0 0 40px 15px ;
     }
+
+    .pagination,
+    .contacts {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .pagination-item {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: rgba(242, 120, 92, 0.5);
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+
+    .pagination-item:nth-child(2) {
+        background: #F2785C;
+    }
+
+    .content-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-button .button {
+        background: #0D606F;
+        box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        padding: 13.5px;
+        font-size: 24px;
+        line-height: 32px;
+        width: 228px;
+        margin: 40px 0 40px;
+    }
+
+    .button-img {
+        padding-right: 10px;
+    }
+
+    .stories-block {
+        display: flex;
+        flex-direction: column;
+        background: url("assets/bg-stories.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .stories-cards {
+        background: rgba(255, 255, 255, 0.7);
+        font-family: 'Aleo', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        color: #0D606F;
+    }
+
+    .story-card {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 120px 0;
+    }
+
+    .story-card:first-child {
+        padding-top: 40px;
+    }
+
+    /*.stories-cards:last-child {*/
+    /*    !*marg-ещз: 40px 0;*!*/
+    /*}*/
+
+    .story-card-img {
+        min-width: 400px;
+        height: 250px;
+        border-radius: 16px;
+        margin-right: 40px;
+    }
+
+    .img-thailand {
+        background: url("assets/thailand.jpg") no-repeat;
+    }
+
+    .img-utah {
+        background: url("assets/utah.jpg") no-repeat;
+    }
+
+    .img-mountains {
+        background: url("assets/mountains.jpg") no-repeat;
+    }
+
+    .img-journey {
+        background: url("assets/journey.jpg") no-repeat;
+    }
+
+    .story-card-subtitle {
+        padding: 0;
+        margin: 0 0 24px;
+    }
+
+    .story-card-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    .text-link {
+        color: #0D606F;
+        font-weight: bold;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 61px;
+        background: url("assets/bg-stories.jpg") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        padding: 0 120px;
+    }
+
+    .footer .empty-block {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer .copyright {
+        text-align: center;
+        flex: 2;
+    }
+
+    .contacts {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .contacts-item {
+        display: inline;
+        padding-right: 20px;
+    }
+
+    .contacts-item {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .contacts-item:last-child {
+        padding-right: 0;
+    }
+
+
+
+
+
+
+
