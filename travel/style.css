@@ -1,3 +1,57 @@
+/*    @font-face {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(fonts/AleoNormal.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    !* latin *!
+    @font-face {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(fonts/AleoNormal2.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    !* latin-ext *!
+    @font-face {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(fonts/AleoBold.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    !* latin *!
+    @font-face {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(fonts/AleoBold2.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    !* latin-ext *!
+    @font-face {
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(fonts/RedHatNormal.woff) format('woff');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    !* latin *!
+    @font-face {
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(fonts/RedHatNormal2.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }*/
+
     html {
         scroll-behavior: smooth;
     }
@@ -21,7 +75,6 @@
     .header-bg {
         background: url("assets/preview-bg.jpg") no-repeat;
         background-size: cover;
-        box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
     }
 
     .header {
@@ -31,7 +84,7 @@
         align-items: center;
         justify-content: space-between;
         background: rgba(242, 120, 92, 0.7);
-        box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
+        box-shadow: 0 4px 4px rgba(13, 96, 111, 0.85);
         position: relative;
         z-index: 1;
     }
@@ -45,7 +98,7 @@
     }
 
     .header-item {
-        padding: 0 42px 0 0;
+        padding: 5px 42px 0 0;
     }
 
     .header-link {
@@ -94,7 +147,7 @@
 
     .search {
         font-family: 'Aleo', serif;
-        font-weight: 700;
+        font-weight: 500;
         padding-top: 32px;
         padding-left: 120px;
         max-width: 892px;
@@ -161,12 +214,18 @@
     }
 
     .steps {
-        margin: 80px 131px 70px;
+        margin: 80px 131px 69px;
     }
 
     .step-cards {
         display: flex;
         justify-content: space-between;
+        font-family: 'Aleo', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #0D606F;
     }
 
     .step-card {
@@ -186,7 +245,7 @@
         padding: 10px 0;
     }
 
-    .card{
+    .step-card-img-bg{
         width: 100px;
         height: 100px;
         background-color: #F2785C;
@@ -204,7 +263,7 @@
         font-size: 32px;
         line-height: 42px;
         color: #FFFFFF;
-        padding-top: 8px;
+        padding-top: 6px;
     }
 
     .country-card {
@@ -269,10 +328,13 @@
         line-height: 32px;
         width: 228px;
         margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .button-img {
-        padding-right: 10px;
+        padding-right: 12px;
     }
 
     .stories-block {
@@ -303,7 +365,6 @@
     .story-card:first-child {
         padding-top: 40px;
     }
-
 
     .story-card-img {
         min-width: 400px;
@@ -360,7 +421,7 @@
         background: url("assets/bg-stories.jpg") no-repeat;
         background-size: cover;
         background-position: bottom;
-        padding: 5px 120px;
+        padding: 4px 120px;
         margin: 0;
     }
 
