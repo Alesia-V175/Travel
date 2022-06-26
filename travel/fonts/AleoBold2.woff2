@@ -1,0 +1,11 @@
+--2022-06-26 14:25:54--  https://fonts.gstatic.com/s/aleo/v11/c4mg1nF8G8_syLbsxDJJn61_9KI.woff2
+Resolving fonts.gstatic.com (fonts.gstatic.com)... 172.217.169.195
+Connecting to fonts.gstatic.com (fonts.gstatic.com)|172.217.169.195|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 16088 (16K) [font/woff2]
+Saving to: ‘c4mg1nF8G8_syLbsxDJJn61_9KI.woff2’
+
+     0K .......... .....                                      100% 1,07M=0,01s
+
+2022-06-26 14:25:54 (1,07 MB/s) - ‘c4mg1nF8G8_syLbsxDJJn61_9KI.woff2’ saved [16088/16088]
+
