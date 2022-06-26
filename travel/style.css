@@ -21,6 +21,7 @@
     .header-bg {
         background: url("assets/preview-bg.jpg") no-repeat;
         background-size: cover;
+        box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
     }
 
     .header {
@@ -38,18 +39,13 @@
     .header-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         list-style-type: none;
         padding: 0;
-        margin: 0;
     }
 
     .header-item {
-        margin: 35px 42px 34px 0;
-    }
-
-    .header-item:last-child {
-        margin-right: 0;
+        padding: 0 42px 0 0;
     }
 
     .header-link {
@@ -122,7 +118,6 @@
         width: 100%;
         background: rgba(255, 255, 255, 0.7);
         border-radius: 16px;
-        /*height: 95px;*/
     }
 
     .search-input {
@@ -139,9 +134,13 @@
         border: none;
     }
 
+    .search-input::-webkit-input-placeholder {
+        color: #F2785C;
+    }
+
     .search-form .button {
         margin:  18px 18px 18px 0;
-        padding: 13px 32px;
+        padding: 13px 33px;
         font-family: 'Red Hat Text', sans-serif;
         font-style: normal;
         font-weight: 500;
@@ -158,27 +157,33 @@
         line-height: 53px;
         color: #F2785C;
         text-align: center;
-        margin: 40px 0 40px;
+        margin: 40px 0;
     }
 
     .steps {
-        margin: 97px 131px;
+        margin: 80px 131px 70px;
     }
 
     .step-cards {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 97px;
     }
 
     .step-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 154px;
         font-weight: 400;
         font-size: 20px;
         color: #0D606F;
+    }
+
+    .step-card:first-child {
+        margin-right: 70px;
+    }
+
+    .step-card p {
+        padding: 10px 0;
     }
 
     .card{
@@ -199,6 +204,7 @@
         font-size: 32px;
         line-height: 42px;
         color: #FFFFFF;
+        padding-top: 8px;
     }
 
     .country-card {
@@ -234,7 +240,6 @@
         text-decoration: none;
         margin: 0;
         padding: 0;
-
     }
 
     .pagination-item {
@@ -259,11 +264,11 @@
         background: #0D606F;
         box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
         border-radius: 10px;
-        padding: 13.5px;
+        padding: 14px;
         font-size: 24px;
         line-height: 32px;
         width: 228px;
-        margin: 40px 0 40px;
+        margin: 40px 0;
     }
 
     .button-img {
@@ -299,15 +304,13 @@
         padding-top: 40px;
     }
 
-    /*.stories-cards:last-child {*/
-    /*    !*marg-ещз: 40px 0;*!*/
-    /*}*/
 
     .story-card-img {
         min-width: 400px;
         height: 250px;
         border-radius: 16px;
         margin-right: 40px;
+        box-shadow: 0 4px 4px #0D606F;
     }
 
     .img-thailand {
@@ -327,8 +330,11 @@
     }
 
     .story-card-subtitle {
-        padding: 0;
         margin: 0 0 24px;
+        padding: 0;
+        font-size: 35px;
+        line-height: 42px;
+        font-weight: normal;
     }
 
     .story-card-text {
@@ -341,15 +347,21 @@
         font-weight: bold;
     }
 
+    .text-link:hover,
+    .text-link:active,
+    .text-link:focus {
+        opacity: 0.70;
+    }
+
     .footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-height: 61px;
         background: url("assets/bg-stories.jpg") no-repeat;
         background-size: cover;
         background-position: bottom;
-        padding: 0 120px;
+        padding: 5px 120px;
+        margin: 0;
     }
 
     .footer .empty-block {
@@ -369,16 +381,19 @@
 
     .contacts-item {
         display: inline;
-        padding-right: 20px;
+        padding: 4px 0 0 20px;
+        /*vertical-align: middle;*/
     }
 
-    .contacts-item {
+    .contacts-item-link {
         display: block;
-        padding-right: 20px;
     }
 
-    .contacts-item:last-child {
-        padding-right: 0;
+    .contacts-item-link:hover,
+    .contacts-item-link:active,
+    .contacts-item-link:focus {
+        background-color: rgba(13, 96, 111, 0.5);
+        border-radius: 16px;
     }
 
 
