@@ -1,4 +1,21 @@
-    console.log("Total score: 110 \n" +
+(function () {
+    const burgerItem = document.querySelector(".burger-menu");
+    burgerItem.addEventListener("click", () => {
+        console.log(burgerItem)
+    })
+}());
+
+
+
+
+
+
+
+
+
+
+
+console.log("Total score: 110 \n" +
         "Вёрстка валидная +10 \n" +
         "<header>, <main>, <footer> +3 \n" +
         "<header>, <main>, <footer> +3 \n" +

@@ -67,7 +67,8 @@
     .header-popup,
     .country-card-arrow,
     .button-img-mobile,
-    .empty-block-mobile {
+    .empty-block-mobile,
+    .burger-menu{
         display: none;
     }
 
@@ -481,25 +482,25 @@
 
     @media (max-width: 992px) {
 
-        .header-bg,
-        .header,
-        .preview-title,
-        .preview-subtitle {
-            display: none;
-        }
+        /*.header-bg,*/
+        /*.header,*/
+        /*.preview-title,*/
+        /*.preview-subtitle {*/
+        /*    display: none;*/
+        /*}*/
 
-        .header-popup {
-            display: flex;
-            justify-content: space-between;
-            padding: 45px 60px 0;
-            position: relative;
-            top: 0;
-            background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 80%);
-        }
+        /*.header-popup {*/
+        /*    display: flex;*/
+        /*    justify-content: space-between;*/
+        /*    padding: 45px 60px 0;*/
+        /*    position: relative;*/
+        /*    top: 0;*/
+        /*    background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 80%);*/
+        /*}*/
 
-        .header-logo-link {
-            margin-left: 0;
-        }
+        /*.header-logo-link {*/
+        /*    margin-left: 0;*/
+        /*}*/
 
         .preview {
             height: auto;
@@ -522,8 +523,44 @@
     }
     
     @media (max-width: 768px) {
-        .header-popup {
-            padding: 45px 20px 0 16px;
+
+        .header-bg {
+            position: relative;
+        }
+
+        .header {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            /*justify-content: space-between;*/
+        }
+
+        .header-logo-img {
+            display: block;
+        }
+
+        .header-logo-link {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        .login-button .button {
+            margin: 0 0 10px;
+        }
+
+        .preview-title {
+            font-size: 40px;
+            line-height: 50px;
+            margin: 0 0 33px;
+        }
+
+        .preview-subtitle {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 46px;
         }
 
         .search {
@@ -769,7 +806,6 @@
 
         .footer {
             padding: 0;
-            /*height: 65px;*/
         }
 
         .copyright {
@@ -798,6 +834,68 @@
     }
 
     @media (max-width: 390px) {
+
+        .header-bg,
+        .header,
+        .preview-title,
+        .preview-subtitle {
+            display: none;
+        }
+
+        .header-popup {
+            display: flex;
+            justify-content: space-between;
+            padding: 45px 20px 0 16px;
+            position: relative;
+            top: 0;
+            background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 80%);
+        }
+
+
+        .header-logo-link {
+            margin-left: 0;
+        }
+
+
+        .burger-menu {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 165px;
+            height: 250px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 21px;
+            background-color: #F2785C;
+            box-shadow: 0 4px 3px rgba(13, 96, 111, 0.25);
+            border-radius: 10px;
+            transform: translateX(100%);
+            transition: 0.3s all linear;
+        }
+
+        .burger-menu .header-list {
+            justify-content: flex-end;
+        }
+
+        .burger-menu .header-item {
+            padding: 5px 15px 5px 0;
+        }
+
+        .cross-burger-link {
+            display: inline-block;
+            padding: 0;
+            margin: 15px;
+        }
+
+        .cross-burger-img {
+            display: block;
+        }
+
+        .burger-menu-active {
+            transform: translateX(0);
+        }
+
         .preview {
             background: url("assets/preview-bg-mobile.jpg") no-repeat;
             margin-top: -82px;
@@ -811,7 +909,6 @@
             background: url("assets/bg-stories-mobile.jpg") no-repeat;
             background-position: bottom;
             padding-top: 0;
-            /*height: 65px;*/
         }
 
     }
