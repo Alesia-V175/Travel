@@ -11,6 +11,7 @@
         line-height: 21px;
         margin: 0;
         background-color: #ffffff;
+        overflow-X: hidden;
     }
 
     .container {
@@ -62,6 +63,13 @@
     .header-logo-link {
         display: block;
         margin-left: 120px;
+    }
+
+    .header-popup,
+    .country-card-arrow,
+    .button-img-mobile,
+    .empty-block-mobile {
+        display: none;
     }
 
     .button {
@@ -225,7 +233,7 @@
         align-items: flex-end;
     }
 
-    .norway {
+    .spain {
         background: url("assets/norway.jpg");
     }
 
@@ -376,7 +384,6 @@
     }
 
     .footer .empty-block {
-        text-align: center;
         flex: 1;
     }
 
@@ -393,10 +400,9 @@
     .contacts-item {
         display: inline;
         padding: 4px 0 0 20px;
-        /*vertical-align: middle;*/
     }
 
-    .contacts-item-link {
+    .contacts-item-link img {
         display: block;
     }
 
@@ -408,10 +414,539 @@
     }
 
     @media (max-width: 1200px) {
+
         .header-item {
-            padding: 5px 10px 0 0;
+            padding: 0 10px;
+        }
+
+        .header-logo-link {
+            margin-left: 60px;
+        }
+
+        .button {
+            margin-right: 60px;
+        }
+
+        .search {
+            padding: 122px 60px 100px;
+        }
+
+        .search-form .button {
+            margin:  9px 9px;
+            padding: 10px 33px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .preview {
+            height: auto;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            line-height: 43px;
+            margin: 20px 0;
+        }
+
+        .steps {
+            margin: 20px 60px 0;
+        }
+
+        .step-card {
+            font-size: 17px;
+        }
+
+        .content-button .button {
+            margin-bottom: 0;
+        }
+
+        .story-card {
+            padding: 30px 60px 0;
+        }
+
+        .stories-cards {
+            font-size: 15px;
+        }
+
+        .story-card-subtitle {
+            margin: 0 0 10px;
+            font-size: 24px;
+            line-height: 21px;
+            font-weight: normal;
+        }
+
+        .stories-cards .content-button .button {
+            margin-bottom: 13px;
         }
     }
+
+    @media (max-width: 1012px) {
+
+        .header {
+            flex-direction: column;
+        }
+
+        .login-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-button .button {
+            margin: 25px 0 10px;
+        }
+
+        .preview {
+            height: auto;
+            background-position: top;
+        }
+
+        .search {
+            padding: 180px 60px 120px;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .search-form .button {
+            white-space: nowrap;
+        }
+
+        .story-card {
+            /*padding: 30px 60px 0;*/
+            flex-direction: column;
+        }
+
+        .story-card-img {
+            min-width: 400px;
+            height: 250px;
+            margin: 0 auto 30px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+
+        .header {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-logo-img {
+            display: block;
+        }
+
+        .header-logo-link {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+
+        .login-button .button {
+            margin: 0 0 10px;
+        }
+
+        .preview {
+            height: auto;
+            background: url("assets/preview-bg.jpg") no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            margin-top: -136px;
+        }
+
+        .preview-title {
+            font-size: 40px;
+            line-height: 50px;
+            margin: 30px 0 33px;
+        }
+
+        .preview-subtitle {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 46px;
+        }
+
+        .search {
+            padding: 142px 15px 61px;
+            line-height: 0;
+        }
+
+        .search-input {
+            height: auto;
+            font-size: 20px;
+            margin: 17px;
+        }
+
+        .search-form .button {
+            margin: 9px;
+            padding: 0 9px;
+            font-size: 11px;
+            line-height: 15px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            line-height: 33px;
+        }
+
+        .steps {
+            margin: 20px 15px 0;
+        }
+
+        .step-card:first-child {
+            align-items: start;
+            margin-right: 0;
+        }
+
+        .step-card:nth-child(2){
+            width: 80%;
+            padding-left: 20px;
+        }
+
+        .step-card:last-child {
+            align-items: flex-end;
+            text-align: end;
+        }
+
+        .banner {
+            font-size: 20px;
+            line-height: 26px;
+            padding-top: 0;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .country-card {
+            min-width: 360px;
+            height: 210px;
+            margin: 0 15px;
+        }
+
+        .spain {
+            background: url("assets/spain-mobile.jpg");
+        }
+
+        .japan {
+            background: url("assets/japan-mobile.jpg");
+            display: none;
+        }
+
+        .usa {
+            background: url("assets/usa-mobile.jpg");
+            display: none;
+        }
+
+        .banner p {
+            position: relative;
+            bottom: 176px;
+            left: -15px;
+            margin: 0;
+        }
+
+        .country-card-arrow-left {
+            display: block;
+            position: relative;
+            bottom: 85px;
+            left: 11px;
+        }
+
+        .country-card-arrow-right {
+            display: block;
+            position: relative;
+            bottom: 85px;
+            left: 320px;
+        }
+
+        .pagination {
+            position: relative;
+            bottom: 20px;
+        }
+
+        .pagination-item {
+            width: 8px;
+            height: 8px;
+            margin: 0 3px;
+        }
+
+        .pagination-item:nth-child(1) {
+            background: #F2785C;
+        }
+
+        .pagination-item:nth-child(2) {
+            background: rgba(242, 120, 92, 0.5);
+        }
+
+        .content-button .button {
+            padding: 7.5px;
+            font-size: 11px;
+            line-height: 15px;
+            width: 92px;
+            margin: 2px 0 0;
+        }
+
+        .button-img {
+            display: none;
+        }
+
+        .button-img-mobile {
+            display: flex;
+            padding-right: 7px;
+        }
+
+        .stories-cards {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .story-card:first-child {
+            padding-top: 10px;
+        }
+
+        .story-card {
+            padding: 15px 15px 0;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .search-input {
+            font-size: 14px;
+            line-height: inherit;
+            margin-bottom: 15px;
+        }
+
+        .search-form .button {
+            font-size: 11px;
+            height: 30px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        .stories .subtitle {
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            font-size: 10px;
+            line-height: 12px;
+            margin: 0;
+            padding: 20px 0 0;
+        }
+
+        .step-card:first-child {
+            align-items: start;
+        }
+
+        .step-card:last-child {
+            align-items: flex-end;
+            text-align: end;
+        }
+
+        .step-card-img {
+            width: 2.2rem;
+        }
+
+        .step-card:last-child img{
+            width: 40px;
+        }
+
+        .step-card-img-bg {
+            width: 70px;
+            height: 70px;
+        }
+
+        .stories-block {
+            background: url("assets/bg-stories-mobile.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .stories-cards {
+            font-size: 9px;
+            line-height: 11px;
+        }
+
+        .story-card {
+            flex-direction: row;
+        }
+
+        .story-card-img {
+            min-width: 155px;
+            height: 130px;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+
+        .img-thailand {
+            background: url("assets/thailand-mobile.jpg") no-repeat;
+        }
+
+        .img-utah {
+            background: url("assets/utah-mobile.jpg") no-repeat;
+        }
+
+        .img-mountains {
+            background: url("assets/mountains-mobile.jpg") no-repeat;
+        }
+
+        .img-journey {
+            background: url("assets/journey-mobile.jpg") no-repeat;
+        }
+
+        .story-card-subtitle {
+            font-size: 11px;
+            line-height: 13px;
+            font-weight: 700;
+            margin: 0;
+            padding: 5px 0 10px;
+        }
+
+        .story-card-text {
+            max-height: 88px;
+            display: block;
+            overflow: hidden;
+            /*text-overflow: ellipsis;*/
+        }
+
+        .stories-cards .content-button .button {
+            margin-top: 10px;
+        }
+
+        .footer {
+            padding: 0;
+        }
+
+        .copyright {
+            display: none;
+        }
+
+        .empty-block-mobile {
+            display: flex;
+            flex: 1;
+        }
+
+        .contacts {
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        .contacts-item {
+            padding: 0 10px 0;
+        }
+
+        .contacts-item:last-child {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 390px) {
+
+        .header-bg,
+        .header,
+        .preview-title,
+        .preview-subtitle {
+            display: none;
+        }
+
+        .header-popup {
+            display: flex;
+            justify-content: space-between;
+            padding: 45px 20px 0 16px;
+            position: relative;
+            top: 0;
+            background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 80%);
+        }
+
+        .header-logo-link {
+            margin-left: 0;
+        }
+
+        .burger-menu {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: -165px;
+            z-index: 10;
+            width: 165px;
+            height: 250px;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 21px;
+            background-color: #F2785C;
+            box-shadow: 0 4px 3px rgba(13, 96, 111, 0.25);
+            border-radius: 10px;
+            transform: translateX(0px);
+            transition: transform 0.3s linear;
+        }
+
+        .burger-menu .header-list {
+            justify-content: flex-end;
+            margin: 0 0 10px;
+        }
+
+        .burger-menu .header-item {
+            padding: 5px 15px 5px 0;
+        }
+
+        .cross-burger-link {
+            display: inline-block;
+            padding: 0;
+            margin: 15px 15px 7px;
+        }
+
+        .cross-burger-img {
+            display: block;
+        }
+
+        .burger-menu-active {
+            transform: translateX(-165px);
+            transition: transform 0.3s linear;
+        }
+
+        .burger-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .burger-menu-overlay-active {
+            display: block;
+        }
+
+        .body-active {
+            overflow: hidden;
+        }
+
+        .preview {
+            background: url("assets/preview-bg-mobile.jpg") no-repeat;
+            margin-top: -82px;
+        }
+
+        .search-input {
+            width: 60%;
+        }
+
+        .footer {
+            background: url("assets/bg-stories-mobile.jpg") no-repeat;
+            background-position: bottom;
+            padding-top: 0;
+        }
+    }
+
+
+
+    
 
 
 

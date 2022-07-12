@@ -1,4 +1,64 @@
-    console.log("Total score: 110 \n" +
+(function () {
+    const burgerItem = document.querySelector(".burger-menu");
+    const burgerImage = document.querySelector(".burger-menu-image");
+    const burgerContainer = document.querySelector(".burger-menu-overlay");
+    const body = document.querySelector("body");
+    burgerImage.addEventListener("click", () => {
+        console.log(burgerItem);
+        burgerItem.classList.toggle("burger-menu-active");
+        burgerContainer.classList.toggle("burger-menu-overlay-active");
+        body.classList.toggle("body-active");
+    })
+
+    const burgerImageClose = document.querySelector(".cross-burger-link");
+    burgerImageClose.addEventListener("click", () => {
+        console.log(burgerImageClose);
+        burgerItem.classList.remove("burger-menu-active");
+        burgerContainer.classList.remove("burger-menu-overlay-active");
+        body.classList.remove("body-active");
+    })
+
+    burgerContainer.addEventListener("click", () => {
+        console.log(burgerContainer);
+        burgerItem.classList.remove("burger-menu-active");
+        burgerContainer.classList.remove("burger-menu-overlay-active");
+        body.classList.remove("body-active");
+    })
+
+    const burgerLinkItems = document.getElementsByClassName("header-link");
+    console.log(burgerLinkItems);
+
+    for (let i = 0; i < burgerLinkItems.length; i++) {
+        burgerLinkItems[i].addEventListener("click", () => {
+            console.log(burgerLinkItems);
+            burgerItem.classList.remove("burger-menu-active");
+            burgerContainer.classList.remove("burger-menu-overlay-active");
+            body.classList.remove("body-active");
+        })
+    }
+}());
+
+
+console.log("Total score: 85 \n" +
+    "Вёрстка соответствует макету. Ширина экрана 390px +48 \n" +
+    "блок <header> +6 \n" +
+    "секция preview +9 \n" +
+    "секция steps +9 \n" +
+    "секция destinations +9 \n" +
+    "секция stories +9 \n" +
+    "блок <footer> +6 \n" +
+    "нет полосы прокрутки при ширине страницы от 1440рх до 390px +7 \n" +
+    "нет полосы прокрутки при ширине страницы от 390px до 320рх +8 \n" +
+    "при ширине страницы 390рх панель навигации скрывается, появляется бургер-иконка +2\n" +
+    "при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n" +
+    "адаптивное меню соответствует макету +4\n" +
+    "при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n" +
+    "ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4\n" +
+    "при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, скрытие меню происходит если сделать клик вне данного окна +4\n");
+
+
+/*
+console.log("Total score: 110 \n" +
         "Вёрстка валидная +10 \n" +
         "<header>, <main>, <footer> +3 \n" +
         "<header>, <main>, <footer> +3 \n" +
@@ -18,4 +78,4 @@
         "плавная прокрутка по якорям +5 \n" +
         "иконки соцсетей в футере при нажатии на них ведут на гитхаб автора проекта и на страницу курса +5 \n" +
         "интерактивность включает в себя другие визуальные эффекты - изменение цвета шрифта +5 \n" +
-        "плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n");
+        "плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n");*/
