@@ -260,17 +260,21 @@
                 Sign In with Google
             </button>
             <hr class="form-hr">
-            <label for="email">E-mail</label>
-            <input class="input-login" id="email" name="email" type="text" placeholder="" required>
-            <label for="password">Password</label>
-            <input class="input-login" id="password" name="password" type="text" placeholder="" required>
-            <button>Sign In</button>
-            <div class="">
-                <a>Forgot Your Password?</a>
+            <div class="label-popup">
+                <label for="email" class="label-popup">E-mail</label>
+                <input class="input-login" id="email" name="email" type="text" placeholder="" required>
             </div>
-            <hr>
-            <p>Don’t have an account?
-                <span><a>Register</a></span>
+            <div class="label-popup">
+                <label for="password" class="label-popup">Password</label>
+                <input class="input-login" id="password" name="password" type="text" placeholder="" required>
+            </div>
+            <button class="form-popup-button sign-button">Sign In</button>
+            <div class="form-remind-password">
+                <a href="#" class="form-link-remind">Forgot Your Password?</a>
+            </div>
+            <hr class="bottom-line">
+            <p class="form-register-account">Don’t have an account?
+                <span><a href="#" class="form-link-remind">Register</a></span>
             </p>
     </form>
     <script src="index.js"></script>
