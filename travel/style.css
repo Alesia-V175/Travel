@@ -2,6 +2,7 @@
         scroll-behavior: smooth;
     }
 
+
     body {
         color: #ffffff;
         font-family: 'Red Hat Text', sans-serif;
@@ -12,6 +13,12 @@
         margin: 0;
         background-color: #ffffff;
         overflow-X: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: 0.5s;
     }
 
     .container {
