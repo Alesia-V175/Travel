@@ -249,51 +249,52 @@
             <div class="empty-block-mobile"></div>
         </footer>
     </div>
-
-    <form class="form-popup-container">
-        <h3 class="form-popup-h3">Log in to your account</h3>
-        <button class="form-popup-button">
-            <i class="fa-brands fa-facebook"></i>Sign In with Facebook
-        </button>
-        <button class="form-popup-button">
-            <img class="form-google-logo" src="assets/logo-google.svg" alt="sign In with Google" />
-            Sign In with Google
-        </button>
-        <hr class="form-hr">
-        <div class="label-popup">
-            <label for="email" class="label-popup">E-mail</label>
-            <input class="input-login" id="email" name="email" type="text" placeholder="" required>
-        </div>
-        <div class="label-popup">
-            <label for="password" class="label-popup">Password</label>
-            <input class="input-login" id="password" name="password" type="text" placeholder="" required>
-        </div>
-        <button class="form-popup-button sign-button">Sign In</button>
-        <div class="form-remind-password">
-            <a href="#" class="form-link-remind">Forgot Your Password?</a>
-        </div>
-        <hr class="bottom-line">
-        <p class="form-register-account">Don’t have an account?
-            <span><a href="#" class="form-link-remind" id="registration">Register</a></span>
-        </p>
-    </form>
+    <div class="form-popup-container">
+        <form class="form-sign-in">
+            <h3 class="form-popup-h3">Log in to your account</h3>
+            <button class="form-popup-button">
+                <i class="fa-brands fa-facebook"></i>Sign In with Facebook
+            </button>
+            <button class="form-popup-button">
+                <img class="form-google-logo" src="assets/logo-google.svg" alt="sign In with Google" />
+                Sign In with Google
+            </button>
+            <hr class="form-hr">
+            <div class="label-popup">
+                <label for="email" class="label-popup">E-mail</label>
+                <input class="input-login" id="email" name="email" type="email" placeholder="" required>
+            </div>
+            <div class="label-popup">
+                <label for="password" class="label-popup">Password</label>
+                <input class="input-login" id="password" name="password" type="password" placeholder=""  required>
+            </div>
+            <button class="form-popup-button sign-button">Sign In</button>
+            <div class="form-remind-password">
+                <a href="#" class="form-link-remind">Forgot Your Password?</a>
+            </div>
+            <hr class="bottom-line">
+            <p class="form-register-account">Don’t have an account?
+                <span><a href="#" class="form-link-remind" id="registration">Register</a></span>
+            </p>
+        </form>
+        <form class="form-sign-up">
+            <h3 class="form-popup-h3">Create account</h3>
+            <div class="label-popup">
+                <label for="email" class="label-popup">E-mail</label>
+                <input class="input-login" id="email" name="email" type="text" placeholder="" required>
+            </div>
+            <div class="label-popup">
+                <label for="password" class="label-popup">Password</label>
+                <input class="input-login" id="password" name="password" type="text" placeholder="" required>
+            </div>
+            <button class="form-popup-button sign-button">Sign In</button>
+            <hr class="bottom-line">
+            <p class="form-register-account">Already have an account?
+                <span><a href="#" class="form-link-remind" id="login">Log in</a></span>
+            </p>
+        </form>
+    </div>
     <div class="form-overlay"></div>
-    <form action="" class="form-popup-container form-sign-in">
-        <h3 class="form-popup-h3">Create account</h3>
-        <div class="label-popup">
-            <label for="email" class="label-popup">E-mail</label>
-            <input class="input-login" id="email" name="email" type="text" placeholder="" required>
-        </div>
-        <div class="label-popup">
-            <label for="password" class="label-popup">Password</label>
-            <input class="input-login" id="password" name="password" type="text" placeholder="" required>
-        </div>
-        <button class="form-popup-button sign-button">Sign In</button>
-        <hr class="bottom-line">
-        <p class="form-register-account">Already have an account?
-            <span><a href="#" class="form-link-remind">Log in</a></span>
-        </p>
-    </form>
     <script src="index.js"></script>
 </body>
 </html>

@@ -3,7 +3,8 @@
     const burgerImage = document.querySelector(".burger-menu-image");
     const burgerContainer = document.querySelector(".burger-menu-overlay");
     const body = document.querySelector("body");
-    const loginItem = document.querySelector(".form-popup-container");
+    const loginItem = document.querySelector(".form-sign-in");
+    const registerItem = document.querySelector(".form-sign-up");
     const loginButton = document.querySelector(".button");
     const formContainer = document.querySelector(".form-overlay");
     burgerImage.addEventListener("click", () => {
@@ -16,7 +17,7 @@
         console.log(loginItem);
         loginItem.classList.toggle("form-popup-container-active");
         formContainer.classList.toggle("form-overlay-active");
-        // body.classList.toggle("body-active");
+        body.classList.toggle("body-active");
     })
 
     // const loginItem = document.querySelector(".form-popup-container");
@@ -73,42 +74,47 @@
 
     const formRegistration = document.getElementById("registration");
     formRegistration.addEventListener("click", () => {
-        console.log();
-        // loginItem.classList.remove("form-popup-container-active");
-        // loginItem.classList.toggle("form-sign-in-active");
-        // loginItem.classList.toggle("form-sign-in-active", true);
+        loginItem.classList.remove("form-popup-container-active");
+        registerItem.classList.toggle("form-popup-container-active");
     })
 
-    const inputEmail = document.getElementById("email").value;
-    const inputPassword = document.getElementById("password").value;
+    const formLogin = document.getElementById("login");
+    formLogin.addEventListener("click", () => {
+        registerItem.classList.remove("form-popup-container-active");
+        loginItem.classList.toggle("form-popup-container-active");
+    } )
+
+    const inputEmail = document.getElementById("email");
+    const inputPassword = document.getElementById("password");
     const signInButton = document.querySelector(".sign-button");
     signInButton.addEventListener("click", () => {
-        console.log();
-        document.getElementById("email").innerHTML = inputEmail;
-        document.getElementById("password").innerHTML = inputPassword;
-        alert("Email: " inputEmail);
-        alert("Password: "inputPassword);
+        const inputEmailValue = inputEmail.value;
+        const inputPasswordValue = inputPassword.value;
+        console.log(inputEmailValue);
+        console.log(inputPasswordValue);
+        alert("Email: " + inputEmailValue);
+        alert("Password: " + inputPasswordValue);
     })
 }());
 
 
-console.log("Total score: 85 \n" +
-    "Вёрстка соответствует макету. Ширина экрана 390px +48 \n" +
-    "блок <header> +6 \n" +
-    "секция preview +9 \n" +
-    "секция steps +9 \n" +
-    "секция destinations +9 \n" +
-    "секция stories +9 \n" +
-    "блок <footer> +6 \n" +
-    "нет полосы прокрутки при ширине страницы от 1440рх до 390px +7 \n" +
-    "нет полосы прокрутки при ширине страницы от 390px до 320рх +8 \n" +
-    "при ширине страницы 390рх панель навигации скрывается, появляется бургер-иконка +2\n" +
-    "при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n" +
-    "адаптивное меню соответствует макету +4\n" +
-    "при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n" +
-    "ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4\n" +
-    "при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, скрытие меню происходит если сделать клик вне данного окна +4\n");
-
+// console.log("Total score: 85 \n" +
+//     "Вёрстка соответствует макету. Ширина экрана 390px +48 \n" +
+//     "блок <header> +6 \n" +
+//     "секция preview +9 \n" +
+//     "секция steps +9 \n" +
+//     "секция destinations +9 \n" +
+//     "секция stories +9 \n" +
+//     "блок <footer> +6 \n" +
+//     "нет полосы прокрутки при ширине страницы от 1440рх до 390px +7 \n" +
+//     "нет полосы прокрутки при ширине страницы от 390px до 320рх +8 \n" +
+//     "при ширине страницы 390рх панель навигации скрывается, появляется бургер-иконка +2\n" +
+//     "при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n" +
+//     "адаптивное меню соответствует макету +4\n" +
+//     "при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n" +
+//     "ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4\n" +
+//     "при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, скрытие меню происходит если сделать клик вне данного окна +4\n");
+//
 
 /*
 console.log("Total score: 110 \n" +
