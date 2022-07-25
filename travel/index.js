@@ -3,12 +3,30 @@
     const burgerImage = document.querySelector(".burger-menu-image");
     const burgerContainer = document.querySelector(".burger-menu-overlay");
     const body = document.querySelector("body");
+    const loginItem = document.querySelector(".form-popup-container");
+    const loginButton = document.querySelector(".button");
+    const formContainer = document.querySelector(".form-overlay");
     burgerImage.addEventListener("click", () => {
         console.log(burgerItem);
         burgerItem.classList.toggle("burger-menu-active");
         burgerContainer.classList.toggle("burger-menu-overlay-active");
         body.classList.toggle("body-active");
     })
+    loginButton.addEventListener("click", () => {
+        console.log(loginItem);
+        loginItem.classList.toggle("form-popup-container-active");
+        formContainer.classList.toggle("form-overlay-active");
+        // body.classList.toggle("body-active");
+    })
+
+    // const loginItem = document.querySelector(".form-popup-container");
+    // const loginButton = document.querySelector(".button");
+    // loginButton.addEventListener("click", () => {
+    //     console.log(loginItem);
+    //     loginItem.classList.toggle("form-popup-container-active");
+    //     burgerContainer.classList.toggle("burger-menu-overlay-active");
+    //     body.classList.toggle("body-active");
+    // })
 
     const burgerImageClose = document.querySelector(".cross-burger-link");
     burgerImageClose.addEventListener("click", () => {
@@ -18,10 +36,18 @@
         body.classList.remove("body-active");
     })
 
+
     burgerContainer.addEventListener("click", () => {
         console.log(burgerContainer);
         burgerItem.classList.remove("burger-menu-active");
         burgerContainer.classList.remove("burger-menu-overlay-active");
+        body.classList.remove("body-active");
+    })
+
+    formContainer.addEventListener("click", () => {
+        console.log(formContainer);
+        loginItem.classList.remove("form-popup-container-active");
+        formContainer.classList.remove("form-overlay-active");
         body.classList.remove("body-active");
     })
 
@@ -36,6 +62,33 @@
             body.classList.remove("body-active");
         })
     }
+
+    const burgerLinkAccount = document.getElementById("account");
+    burgerLinkAccount.addEventListener("click", () => {
+        console.log(loginItem);
+        loginItem.classList.toggle("form-popup-container-active");
+        formContainer.classList.toggle("form-overlay-active");
+        body.classList.toggle("body-active");
+    })
+
+    const formRegistration = document.getElementById("registration");
+    formRegistration.addEventListener("click", () => {
+        console.log();
+        // loginItem.classList.remove("form-popup-container-active");
+        // loginItem.classList.toggle("form-sign-in-active");
+        // loginItem.classList.toggle("form-sign-in-active", true);
+    })
+
+    const inputEmail = document.getElementById("email").value;
+    const inputPassword = document.getElementById("password").value;
+    const signInButton = document.querySelector(".sign-button");
+    signInButton.addEventListener("click", () => {
+        console.log();
+        document.getElementById("email").innerHTML = inputEmail;
+        document.getElementById("password").innerHTML = inputPassword;
+        alert("Email: " inputEmail);
+        alert("Password: "inputPassword);
+    })
 }());
 
 
