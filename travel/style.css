@@ -223,15 +223,22 @@
         align-items: center;
     }
 
+    .destinations {
+        overflow: hidden;
+    }
+
     .banner {
         display: flex;
         flex-flow: row nowrap;
-        overflow: hidden;
+        /*overflow: hidden;*/
         justify-content: center;
         font-size: 32px;
         line-height: 42px;
         color: #FFFFFF;
         padding-top: 6px;
+        transform: translateX(0px);
+        transition: transform 0.3s linear;
+        position: relative;
     }
 
     .country-card {
@@ -278,7 +285,7 @@
         margin: 0 5px;
     }
 
-    .pagination-item:nth-child(2) {
+    .pagination-item-active {
         background: #F2785C;
     }
 
@@ -380,6 +387,10 @@
     .text-link:active,
     .text-link:focus {
         opacity: 0.70;
+    }
+
+    .country-card-arrow-left, .country-card-arrow-right {
+        display: none;
     }
 
     .footer {
@@ -772,7 +783,6 @@
             margin: 0 auto 30px;
         }
     }
-    
     @media (max-width: 768px) {
 
         .header {
@@ -859,53 +869,68 @@
             text-align: end;
         }
 
+        .destinations {
+            position: relative;
+            overflow: hidden;
+        }
+
         .banner {
             font-size: 20px;
             line-height: 26px;
             padding-top: 0;
-            justify-content: center;
-            overflow: hidden;
+            justify-content: start;
+            /*width: 100%;*/
         }
 
         .country-card {
-            min-width: 360px;
+            min-width: 90%;
             height: 210px;
             margin: 0 15px;
         }
 
         .spain {
             background: url("assets/spain-mobile.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .japan {
             background: url("assets/japan-mobile.jpg");
-            display: none;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .usa {
             background: url("assets/usa-mobile.jpg");
-            display: none;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .banner p {
             position: relative;
             bottom: 176px;
-            left: -15px;
+            left: 15px;
             margin: 0;
         }
 
         .country-card-arrow-left {
             display: block;
-            position: relative;
-            bottom: 85px;
-            left: 11px;
+            position: absolute;
+            top: 145px;
+            left: 25px;
+            transform: rotate(180deg);
         }
+
 
         .country-card-arrow-right {
             display: block;
-            position: relative;
-            bottom: 85px;
-            left: 320px;
+            position: absolute;
+            top: 145px;
+            left: 350px;
+        }
+
+        .arrow-disable {
+            opacity: 50%;
         }
 
         .pagination {
@@ -1155,26 +1180,7 @@
         .preview {
             margin-top: -157px;
         }
-
-        /*.header-list {*/
-        /*    display: flex;*/
-        /*    flex-wrap: wrap;*/
-        /*    justify-content: space-evenly;*/
-        /*    list-style-type: none;*/
-        /*    padding: 0;*/
-        /*    flex: 1;*/
-        /*}*/
-
-        /*.header-item {*/
-        /*    display: flex;*/
-        /*    flex: 2;*/
-        /*}*/
-
-        /*.header-link {*/
-        /*    text-align: center;*/
-        /*}*/
     }
-
     @media (max-width: 390px) {
 
         .header-bg,
@@ -1261,6 +1267,10 @@
 
         .search-input {
             width: 60%;
+        }
+
+        .country-card {
+            min-width: 92%;
         }
 
         .footer {

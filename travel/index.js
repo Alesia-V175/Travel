@@ -95,7 +95,98 @@
         alert("Email: " + inputEmailValue);
         alert("Password: " + inputPasswordValue);
     })
+
+    const banner = document.querySelector(".banner");
+    const cards = document.getElementsByClassName("country-card");
+    const offset = 0;
+    const pagination = document.getElementsByClassName("pagination-item");
+    const leftArrow = document.getElementById("left-arrow");
+    const rightArrow = document.getElementById("right-arrow");
+    let currentPosition = 0;
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", () => {
+            move(cards[i], i);
+        })
+    }
+
+    for (let i = 0; i < pagination.length; i++) {
+        pagination[i].addEventListener("click", () => {
+            move(cards[i], i);
+            console.log(i);
+        })
+    }
+
+    function move(item, index) {
+        let width = getWidth(item);
+        const widthBody = getWidth(body);
+        let step = 0;
+        if (widthBody <= 768) {
+            step = 0;
+        } else {
+            step = 1;
+        }
+
+        let offset = -width * (index - step);
+        offset = offset + "px";
+        console.log(offset);
+        banner.style.transform = "translateX(" + offset + ")";
+
+        for (let i = 0; i < pagination.length; i++) {
+            pagination[i].classList.remove("pagination-item-active");
+        }
+        pagination[index].classList.toggle("pagination-item-active");
+        currentPosition = index;
+
+        if (index === 0) {
+            leftArrow.classList.add("arrow-disable");
+        } else if (index === cards.length - 1) {
+            rightArrow.classList.add("arrow-disable");
+        } else {
+            leftArrow.classList.remove("arrow-disable");
+            rightArrow.classList.remove("arrow-disable");
+        }
+    }
+
+    function getWidth(item) {
+        let style = item.currentStyle || window.getComputedStyle(item)
+        let width = style.width.split("px")[0] * 1 + style.marginLeft.split("px")[0] * 1 + style.marginRight.split("px")[0] * 1;
+        return width;
+    }
+
+    leftArrow.addEventListener("click", () => {
+
+        if (currentPosition <= 0) {
+            currentPosition = 0;
+            return;
+        }
+
+        currentPosition = currentPosition - 1;
+        move(cards[currentPosition], currentPosition);
+    })
+
+    rightArrow.addEventListener("click", () => {
+
+        if (currentPosition >= cards.length - 1) {
+            currentPosition = cards.length - 1;
+            return;
+        }
+
+        currentPosition = currentPosition + 1;
+        move(cards[currentPosition], currentPosition);
+    })
 }());
+
+
+console.log("Total score: 125 \n" +
+    "Слайдер изображений в секции destinations +50\n" +
+    "   на десктоп варианте при клике на урезанную картинку слева или справа изображение меняется по принципу карусели + 20\n" +
+    "   Три точки внизу отображают \"номер слайда\", который становится активным при нахождении соответствующего ему слайда в центре. На мобильном варианте картинка одна, но поверх нее появляются стрелочки навигации +20\n" +
+    "   Анимации плавного перемещения для слайдера +10\n" +
+    "Нажатие на кнопку Login (кнопка Account в мобильной версии) показывает сверстанный логин попап + 50\n" +
+    "   логин попап соответствует верстке его закрытие происходит при клике вне попапа +25\n" +
+    "   логин попап имеет 2 инпута (email и пароль) при нажатии на кнопку Sign In показывается браузерный алерт с введенными данными +25\n" +
+    "Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету +25\n")
 
 
 // console.log("Total score: 85 \n" +

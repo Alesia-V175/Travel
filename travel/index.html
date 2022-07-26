@@ -119,12 +119,6 @@
                 <h2 class="subtitle">POPULAR DESTINATIONS</h2>
                 <div class="banner">
                     <div class="country-card spain">
-                        <a class="country-card-arrow-left" href="#">
-                            <img src="assets/arrow-left.svg" alt="previos"/>
-                        </a>
-                        <a class="country-card-arrow-right" href="#">
-                            <img src="assets/arrow-right.svg" alt="next"/>
-                        </a>
                         <p>Spain</p>
                     </div>
                     <div class="country-card japan">
@@ -138,7 +132,7 @@
                     <li class="pagination-item">
                         <a href="#"></a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item pagination-item-active">
                         <a href="#"></a>
                     </li>
                     <li class="pagination-item">
@@ -151,6 +145,12 @@
                         <img class="button-img-mobile" src="assets/arrow-mobile.svg" alt="find more" /> Find More
                     </button>
                 </div>
+                <a class="country-card-arrow-left arrow-disable" id="left-arrow">
+                    <img src="assets/arrow-right.svg" alt="previos"/>
+                </a>
+                <a class="country-card-arrow-right" id="right-arrow">
+                    <img src="assets/arrow-right.svg" alt="next"/>
+                </a>
             </section>
             <section class="stories" id="stories">
                 <h2 class="subtitle">TRAVEL STORIES</h2>
@@ -276,7 +276,7 @@
             </div>
             <hr class="bottom-line">
             <p class="form-register-account">Don’t have an account?
-                <span><a href="#" class="form-link-remind" id="registration">Register</a></span>
+                <span><a class="form-link-remind" id="registration">Register</a></span>
             </p>
         </form>
         <form class="form-sign-up">
@@ -292,7 +292,7 @@
             <button class="form-popup-button sign-button">Sign In</button>
             <hr class="bottom-line">
             <p class="form-register-account">Already have an account?
-                <span><a href="#" class="form-link-remind" id="login">Log in</a></span>
+                <span><a class="form-link-remind" id="login">Log in</a></span>
             </p>
         </form>
     </div>
