@@ -3,10 +3,11 @@
     const burgerImage = document.querySelector(".burger-menu-image");
     const burgerContainer = document.querySelector(".burger-menu-overlay");
     const body = document.querySelector("body");
+    const formContainer = document.querySelector(".form-popup-container")
     const loginItem = document.querySelector(".form-sign-in");
     const registerItem = document.querySelector(".form-sign-up");
     const loginButton = document.querySelector(".button");
-    const formContainer = document.querySelector(".form-overlay");
+    const formOverlay = document.querySelector(".form-overlay");
     burgerImage.addEventListener("click", () => {
         console.log(burgerItem);
         burgerItem.classList.toggle("burger-menu-active");
@@ -15,19 +16,14 @@
     })
     loginButton.addEventListener("click", () => {
         console.log(loginItem);
-        loginItem.classList.toggle("form-popup-container-active");
-        formContainer.classList.toggle("form-overlay-active");
+        loginItem.classList.remove("form-active");
+        registerItem.classList.remove("form-active");
+        formContainer.classList.toggle("form-popup-container-active");
+        loginItem.classList.toggle("form-active");
+        formOverlay.classList.toggle("form-overlay-active");
         body.classList.toggle("body-active");
     })
 
-    // const loginItem = document.querySelector(".form-popup-container");
-    // const loginButton = document.querySelector(".button");
-    // loginButton.addEventListener("click", () => {
-    //     console.log(loginItem);
-    //     loginItem.classList.toggle("form-popup-container-active");
-    //     burgerContainer.classList.toggle("burger-menu-overlay-active");
-    //     body.classList.toggle("body-active");
-    // })
 
     const burgerImageClose = document.querySelector(".cross-burger-link");
     burgerImageClose.addEventListener("click", () => {
@@ -45,10 +41,10 @@
         body.classList.remove("body-active");
     })
 
-    formContainer.addEventListener("click", () => {
-        console.log(formContainer);
-        loginItem.classList.remove("form-popup-container-active");
-        formContainer.classList.remove("form-overlay-active");
+    formOverlay.addEventListener("click", () => {
+        console.log(formOverlay);
+        formContainer.classList.remove("form-popup-container-active");
+        formOverlay.classList.remove("form-overlay-active");
         body.classList.remove("body-active");
     })
 
@@ -67,21 +63,25 @@
     const burgerLinkAccount = document.getElementById("account");
     burgerLinkAccount.addEventListener("click", () => {
         console.log(loginItem);
-        loginItem.classList.toggle("form-popup-container-active");
-        formContainer.classList.toggle("form-overlay-active");
+        loginItem.classList.remove("form-active");
+        registerItem.classList.remove("form-active");
+        formContainer.classList.toggle("form-popup-container-active");
+        loginItem.classList.toggle("form-active");
+        formOverlay.classList.toggle("form-overlay-active");
         body.classList.toggle("body-active");
     })
 
     const formRegistration = document.getElementById("registration");
     formRegistration.addEventListener("click", () => {
-        loginItem.classList.remove("form-popup-container-active");
-        registerItem.classList.toggle("form-popup-container-active");
+        loginItem.classList.remove("form-active");
+        registerItem.classList.toggle("form-active");
+
     })
 
     const formLogin = document.getElementById("login");
     formLogin.addEventListener("click", () => {
-        registerItem.classList.remove("form-popup-container-active");
-        loginItem.classList.toggle("form-popup-container-active");
+        registerItem.classList.remove("form-active");
+        loginItem.classList.toggle("form-active");
     } )
 
     const inputEmail = document.getElementById("email");
