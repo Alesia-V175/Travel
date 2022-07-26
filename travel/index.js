@@ -84,17 +84,20 @@
         loginItem.classList.toggle("form-active");
     } )
 
-    const inputEmail = document.getElementById("email");
-    const inputPassword = document.getElementById("password");
-    const signInButton = document.querySelector(".sign-button");
-    signInButton.addEventListener("click", () => {
-        const inputEmailValue = inputEmail.value;
-        const inputPasswordValue = inputPassword.value;
-        console.log(inputEmailValue);
-        console.log(inputPasswordValue);
-        alert("Email: " + inputEmailValue);
-        alert("Password: " + inputPasswordValue);
-    })
+    const signInButton = document.querySelectorAll(".sign-button");
+    console.log(signInButton)
+    console.log(signInButton.length)
+    for (let i = 0; i < signInButton.length; i++) {
+        signInButton[i].addEventListener("click", () => {
+            console.log("click");
+            const inputEmailValue = document.querySelector(".form-active .email").value;
+            const inputPasswordValue = document.querySelector(".form-active .password").value;
+            console.log(inputEmailValue);
+            console.log(inputPasswordValue);
+            alert("Email: " + inputEmailValue);
+            alert("Password: " + inputPasswordValue);
+        })
+    }
 
     const banner = document.querySelector(".banner");
     const cards = document.getElementsByClassName("country-card");

@@ -605,6 +605,10 @@
         color: #0D606F;
     }
 
+    .form-link-remind:hover {
+        cursor: pointer;
+    }
+
     .form-link-remind:hover,
     .form-link-remind:active,
     .form-link-remind:focus,
@@ -773,7 +777,6 @@
         }
 
         .story-card {
-            /*padding: 30px 60px 0;*/
             flex-direction: column;
         }
 
@@ -921,7 +924,6 @@
             transform: rotate(180deg);
         }
 
-
         .country-card-arrow-right {
             display: block;
             position: absolute;
@@ -986,7 +988,6 @@
             width: 70%;
             left: 10%;
         }
-
     }
 
     @media (max-width: 576px) {
