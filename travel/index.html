@@ -70,7 +70,7 @@
                             <a class="header-link" href="#stories">Travel Stories</a>
                         </li>
                         <li class="header-item">
-                            <a class="header-link" href="#">Account</a>
+                            <a class="header-link" href="#" id="account">Account</a>
                         </li>
                         <li class="header-item">
                             <a class="header-link" href="#contacts">Social Media</a>
@@ -119,12 +119,6 @@
                 <h2 class="subtitle">POPULAR DESTINATIONS</h2>
                 <div class="banner">
                     <div class="country-card spain">
-                        <a class="country-card-arrow-left" href="#">
-                            <img src="assets/arrow-left.svg" alt="previos"/>
-                        </a>
-                        <a class="country-card-arrow-right" href="#">
-                            <img src="assets/arrow-right.svg" alt="next"/>
-                        </a>
                         <p>Spain</p>
                     </div>
                     <div class="country-card japan">
@@ -138,7 +132,7 @@
                     <li class="pagination-item">
                         <a href="#"></a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item pagination-item-active">
                         <a href="#"></a>
                     </li>
                     <li class="pagination-item">
@@ -151,6 +145,12 @@
                         <img class="button-img-mobile" src="assets/arrow-mobile.svg" alt="find more" /> Find More
                     </button>
                 </div>
+                <a class="country-card-arrow-left arrow-disable" id="left-arrow">
+                    <img src="assets/arrow-right.svg" alt="previos"/>
+                </a>
+                <a class="country-card-arrow-right" id="right-arrow">
+                    <img src="assets/arrow-right.svg" alt="next"/>
+                </a>
             </section>
             <section class="stories" id="stories">
                 <h2 class="subtitle">TRAVEL STORIES</h2>
@@ -247,9 +247,56 @@
                 </li>
             </ul>
             <div class="empty-block-mobile"></div>
-
         </footer>
     </div>
+    <div class="form-popup-container">
+        <form class="form-sign-in form-active">
+            <h3 class="form-popup-h3">Log in to your account</h3>
+            <button class="form-popup-button">
+                <i class="fa-brands fa-facebook"></i>Sign In with Facebook
+            </button>
+            <button class="form-popup-button">
+                <img class="form-google-logo" src="assets/logo-google.svg" alt="sign In with Google" />
+                Sign In with Google
+            </button>
+            <div lass="form-hr">
+            <hr class="form-hr-hr"><span class="form-hr-span">or</span>
+            </div>
+            <div class="label-popup">
+                <label for="email" class="label-popup">E-mail</label>
+                <input class="input-login" id="email" name="email" type="email" placeholder="" required>
+            </div>
+            <div class="label-popup">
+                <label for="password" class="label-popup">Password</label>
+                <input class="input-login" id="password" name="password" type="password" placeholder=""  required>
+            </div>
+            <button class="form-popup-button sign-button">Sign In</button>
+            <div class="form-remind-password">
+                <a href="#" class="form-link-remind">Forgot Your Password?</a>
+            </div>
+            <hr class="bottom-line">
+            <p class="form-register-account">Don’t have an account?
+                <span><a class="form-link-remind" id="registration">Register</a></span>
+            </p>
+        </form>
+        <form class="form-sign-up">
+            <h3 class="form-popup-h3">Create account</h3>
+            <div class="label-popup">
+                <label for="email" class="label-popup">E-mail</label>
+                <input class="input-login" id="email" name="email" type="text" placeholder="" required>
+            </div>
+            <div class="label-popup">
+                <label for="password" class="label-popup">Password</label>
+                <input class="input-login" id="password" name="password" type="text" placeholder="" required>
+            </div>
+            <button class="form-popup-button sign-button">Sign In</button>
+            <hr class="bottom-line">
+            <p class="form-register-account">Already have an account?
+                <span><a class="form-link-remind" id="login">Log in</a></span>
+            </p>
+        </form>
+    </div>
+    <div class="form-overlay"></div>
     <script src="index.js"></script>
 </body>
 </html>
