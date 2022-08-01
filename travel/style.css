@@ -946,13 +946,6 @@
             margin: 0 3px;
         }
 
-        .pagination-item:nth-child(1) {
-            background: #F2785C;
-        }
-
-        .pagination-item:nth-child(2) {
-            background: rgba(242, 120, 92, 0.5);
-        }
 
         .content-button .button {
             padding: 7.5px;

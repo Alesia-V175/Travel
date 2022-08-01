@@ -8,6 +8,7 @@
     const registerItem = document.querySelector(".form-sign-up");
     const loginButton = document.querySelector(".button");
     const formOverlay = document.querySelector(".form-overlay");
+
     burgerImage.addEventListener("click", () => {
         console.log(burgerItem);
         burgerItem.classList.toggle("burger-menu-active");
@@ -106,6 +107,14 @@
     const leftArrow = document.getElementById("left-arrow");
     const rightArrow = document.getElementById("right-arrow");
     let currentPosition = 0;
+
+    const widthBody1 = getWidth(body);
+    if (widthBody1 <= 768) {
+        pagination[0].classList.add("pagination-item-active");
+    } else {
+        pagination[1].classList.add("pagination-item-active");
+    }
+
 
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", () => {
